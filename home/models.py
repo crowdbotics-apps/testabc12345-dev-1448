@@ -36,19 +36,3 @@ class HomePage(models.Model):
 class Test(models.Model):
     "Generated Model"
     gfgfh = models.PositiveIntegerField()
-    test = models.DateField(null=True, blank=True, auto_now=False, auto_now_add=True,)
-    ttest = models.OneToOneField(
-        "home.CustomText",
-        on_delete=models.CASCADE,
-        null=True,
-        blank=True,
-        related_name="test_ttest",
-    )
-    one = models.OneToOneField(
-        "home.HomePage",
-        on_delete=models.CASCADE,
-        null=True,
-        blank=True,
-        related_name="test_one",
-    )
-    testh = models.ManyToManyField("users.User", blank=True, related_name="test_testh",)
