@@ -8,13 +8,15 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('home', '0005_auto_20200106_1123'),
+        ("home", "0005_auto_20200106_1123"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='test',
-            name='testh',
-            field=models.ManyToManyField(blank=True, related_name='test_testh', to=settings.AUTH_USER_MODEL),
+            model_name="test",
+            name="testh",
+            field=models.ManyToManyField(
+                blank=True, related_name="test_testh", to=settings.AUTH_USER_MODEL
+            ),
         ),
     ]

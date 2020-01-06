@@ -51,11 +51,4 @@ class Test(models.Model):
         blank=True,
         related_name="test_one",
     )
-    many = models.OneToOneField(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-        null=True,
-        blank=True,
-        related_name="test_many",
-    )
     testh = models.ManyToManyField("users.User", blank=True, related_name="test_testh",)
