@@ -8,6 +8,9 @@ from django.db import models
 
 class CustomText(models.Model):
     title = models.CharField(max_length=150,)
+    test = models.ManyToManyField(
+        "home.HomePage", blank=True, related_name="customtext_test",
+    )
 
     def __str__(self):
         return self.title
