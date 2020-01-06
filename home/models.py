@@ -36,3 +36,4 @@ class HomePage(models.Model):
 class Test(models.Model):
     "Generated Model"
     gfgfh = models.PositiveIntegerField()
+    test = models.DateField(auto_now=False, auto_now_add=True, null=True, blank=True,)
