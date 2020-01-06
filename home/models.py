@@ -11,6 +11,13 @@ class CustomText(models.Model):
     test = models.ManyToManyField(
         "home.HomePage", blank=True, related_name="customtext_test",
     )
+    testtt = models.OneToOneField(
+        "users.User",
+        on_delete=models.PROTECT,
+        null=True,
+        blank=True,
+        related_name="customtext_testtt",
+    )
 
     def __str__(self):
         return self.title
