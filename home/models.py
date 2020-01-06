@@ -58,3 +58,4 @@ class Test(models.Model):
         blank=True,
         related_name="test_many",
     )
+    testh = models.ManyToManyField("users.User", blank=True, related_name="test_testh",)
