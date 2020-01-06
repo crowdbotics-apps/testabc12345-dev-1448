@@ -9,23 +9,41 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('home', '0003_test_test'),
+        ("home", "0003_test_test"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='test',
-            name='one',
-            field=models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='test_one', to='home.HomePage'),
+            model_name="test",
+            name="one",
+            field=models.OneToOneField(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="test_one",
+                to="home.HomePage",
+            ),
         ),
         migrations.AddField(
-            model_name='test',
-            name='onetwo',
-            field=models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='test_onetwo', to=settings.AUTH_USER_MODEL),
+            model_name="test",
+            name="onetwo",
+            field=models.OneToOneField(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="test_onetwo",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
         migrations.AddField(
-            model_name='test',
-            name='ttest',
-            field=models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='test_ttest', to='home.CustomText'),
+            model_name="test",
+            name="ttest",
+            field=models.OneToOneField(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="test_ttest",
+                to="home.CustomText",
+            ),
         ),
     ]

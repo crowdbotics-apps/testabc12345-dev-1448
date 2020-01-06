@@ -51,10 +51,10 @@ class Test(models.Model):
         blank=True,
         related_name="test_one",
     )
-    onetwo = models.OneToOneField(
-        "users.User",
+    many = models.OneToOneField(
+        settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
         null=True,
         blank=True,
-        related_name="test_onetwo",
+        related_name="test_many",
     )
