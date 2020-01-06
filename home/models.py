@@ -46,3 +46,31 @@ class HomePage(models.Model):
 class Test(models.Model):
     "Generated Model"
     gfgfh = models.PositiveIntegerField()
+    test = models.OneToOneField(
+        "home.CustomText",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="test_test",
+    )
+    ttestt = models.OneToOneField(
+        "home.HomePage",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="test_ttestt",
+    )
+    testhk = models.OneToOneField(
+        "users.User",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="test_testhk",
+    )
+    tesst = models.OneToOneField(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="test_tesst",
+    )
