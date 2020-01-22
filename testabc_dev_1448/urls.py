@@ -34,9 +34,9 @@ urlpatterns = [
     path("api/v1/", include("users.api.v1.urls")),
 ]
 
-admin.site.site_header = "testabc"
-admin.site.site_title = "testabc Admin Portal"
-admin.site.index_title = "testabc Admin"
+admin.site.site_header = "testabc123"
+admin.site.site_title = "testabc123 Admin Portal"
+admin.site.index_title = "testabc123 Admin"
 
 # swagger
 schema_view = get_schema_view(
